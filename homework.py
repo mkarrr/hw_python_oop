@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import ClassVar
 
 
 @dataclass
@@ -54,8 +55,8 @@ class Training:
 
 class Running(Training):
     """Тренировка: бег."""
-    coeff_calorie_1 = 18
-    coeff_calorie_2 = 20
+    COEFF_CALORIE_1: ClassVar[int] = 18
+    COEFF_CALORIE_2: ClassVar[int] = 20
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
